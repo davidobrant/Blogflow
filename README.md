@@ -9,6 +9,6 @@
 #### npm run dev
 
 ## Accounts: (username : password)
-### aaa : password
-### bbb : password
+### aaa : password  (admin, editor)
+### bbb : password  (editor)
 ### ccc : password
