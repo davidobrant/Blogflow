@@ -1,0 +1,21 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+
+    & svg {
+        font-size: 2rem;
+        padding: .2rem;
+        cursor: pointer;
+    }
+    
+    & :hover {
+        color: var(--logout);
+        box-shadow: var(--boxShadow);
+        background: var(--nav-active);
+        border-radius: 50%;
+        border: 2px solid var(--logout);
+        text-shadow: var(--textShadow);
+    }
+}

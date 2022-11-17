@@ -1,0 +1,37 @@
+:root {
+
+    --nav-size: 2.4rem;
+
+    --danger: red;
+    --success: green;
+    --accent: rgb(44, 85, 207);
+    
+    --app-bg: #ededed;
+    --bg-stnd: #fafafa;
+    
+    --logo-text: rgb(0, 182, 0);
+
+    --card-bg: #fafafa;
+    --card-title: #fff; 
+    --card-width: 800px;
+
+    --shadow-clr: rgba(0,0,0,.2);
+    
+    --nav-active: #fefefe; 
+    --nav-active-text: rgb(0, 182, 0); 
+    --nav-active-text-active: rgb(82, 240, 82);
+    --navShadow: 0px 2px 4px rgba(0,0,0,.1);
+    --footerShadow: 0px -2px 4px rgba(0,0,0,.1);
+    
+    --logout: rgb(44, 85, 207);
+    --border-clr: #eee;
+    
+    --text-clr-light: #aaa;
+    
+    --boxShadow: 0px 0px 4px 1px var(--shadow-clr);
+    --boxShadowInset: inset 0px 0px 4px 1px var(--shadow-clr);
+    
+    --textShadow: 0px 0px 2px var(--shadow-clr);
+    --textShadowHover: 0px 0px 2px rgba(0,0,0,.3);
+    --textShadowTitle: 0px 0px 2px rgba(0,0,0,.3);
+}

@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    height: 2rem;
+    border-top: 1px solid #eee;
+    font-size: .8rem;
+    user-select: none;
+    background: var(--bg-stnd);
+    box-shadow: var(--footerShadow);
+}

@@ -1,0 +1,48 @@
+.card {
+    background: var(--bg-stnd);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--boxShadow);
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    & input {
+        padding: .2rem;
+        margin: .2rem 0;
+        text-align: center;
+    }
+
+    & ::placeholder {
+        color: var(--text-clr-light);
+        text-align: center;
+    }
+
+    & button {
+        padding: .2rem;
+        margin-top: .2rem;
+        cursor: pointer;
+    }
+}
+
+.error {
+    color: var(--danger);
+    text-align: center;
+    margin-top: .4rem;
+    font-size: .8rem;
+}
+
+.link {
+    position: absolute;
+    top: .4rem;
+    right: 1rem;
+
+    & a {
+        text-decoration: none;
+        font-size: .8rem;
+    }
+}

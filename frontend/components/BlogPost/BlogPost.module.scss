@@ -1,0 +1,108 @@
+.card {
+    box-shadow: var(--boxShadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 1rem;
+    padding: .7rem 1rem;
+    max-width: var(--card-width);
+    border-radius: .8rem;
+    background: var(--card-bg);
+    position: relative;
+
+    & .deleteBtn {
+        position: absolute;
+        top: .6rem;
+        right: .6rem;
+        visibility: hidden;
+        cursor: pointer;
+
+        & :hover {
+            color: var(--danger);
+        }
+    }
+
+    &:hover .deleteBtn {
+        visibility: visible;
+    }
+}
+
+.title {
+    padding: .4rem .8rem;
+    border-radius: 1rem;
+    margin-bottom: .6rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--border-clr);
+    background: var(--card-title);
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    
+    &:hover {
+        color: var(--accent);
+        text-shadow: var(--textShadowHover);
+        box-shadow: var(--boxShadow);
+    }
+}
+
+.body {
+    background: var(--app-bg);
+    padding: .6rem .8rem;
+    border-radius: 1rem;
+    width: 100%;
+    box-shadow: var(--boxShadowInset) !important;
+    box-shadow: var(--boxShadow);
+    overflow-wrap: break-word;
+}
+
+.bottomContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: .5rem;
+    user-select: none;
+
+    & .createdAt {
+        font-size: .8rem;
+        color: black; 
+        
+        & .created {
+            color: #888;
+        }
+    }
+
+    & .author {
+        color: var(--accent);  
+        
+        & .by {
+            color: black; 
+            font-size: .7rem;  
+        }
+
+        &:hover {
+            color: var(--success);
+            cursor: pointer;
+        } 
+
+        & :active {
+            color: var(--nav-active-text-active);
+        }
+    }
+}
+
+.privacy {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    color: #aaa;
+
+    &:hover {
+        color: black;
+    }
+}
