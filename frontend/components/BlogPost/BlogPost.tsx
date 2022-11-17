@@ -47,7 +47,8 @@ const BlogPost = ({ blog, onDelete, onUpdate }: Props) => {
                 <div className={styles.author}><span className={styles.by}>By: </span><Link href={blog.author}>{blog.author}</Link></div>
             </div>
             { editor && <div className={styles.deleteBtn}><FaTimes onClick={() => handleDelete(blog.blogId)}/></div>}
-            { currentUser && 
+            
+            { (currentUser || editor) && 
                 <div className={styles.privacy}>
                     {blog.privacy ? <FaToggleOff onClick={() => togglePrivace(blog.blogId)}/> : <FaToggleOn onClick={() => togglePrivace(blog.blogId)}/> }
                     {blog.privacy ? ' private' : ' public' }

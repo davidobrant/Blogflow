@@ -27,7 +27,9 @@ blogController.getBlogsByUser = async (req, res) => {
     try {
         const userId = Number(req.params.userId)
         const authId = req.userId
-        if(userId === authId) {
+        const authRoles = await db.getUserRoles(authId)
+        const editor = authRoles.some(role => role.rolename === 'EDITOR_USER')
+        if(userId === authId || editor) {
             const blogs = await db.getBlogsByUserId(userId)
             res.status(200).json(blogs)
         } else {

@@ -5,11 +5,12 @@ import BlogPost from '../../components/BlogPost/BlogPost'
 import { Blogpost } from '../../typings'
 import styles from '../../styles/UserIndex.module.scss'
 import Head from 'next/head'
+import { useAuth } from '../../hooks/useAuth'
 
 const UserPage = () => {
 
     const router = useRouter()
-    const { user } = router.query
+    const { username } = router.query
     const [blogs, setBlogs] = useState<Blogpost[]>()
     const [render, setRender] = useState<boolean>(false)
 
@@ -17,7 +18,7 @@ const UserPage = () => {
         setRender(false)
         const get = async () => {
             try {
-                const userId = await getUserIdByUsername(user)
+                const userId = await getUserIdByUsername(username)
                 const { data } = await getBlogsByUserId(userId.data)
                 setBlogs(data)
             }
@@ -26,18 +27,18 @@ const UserPage = () => {
             }
         }
         get()
-    }, [user, render])
+    }, [username, render])
 
     return ( 
         <>
             <Head>
-                <title>Blogflow | {user}</title>
+                <title>Blogflow | {username}</title>
             </Head>
             <div className={styles.container}>
                 <div className={styles.blogContainer}>
                     { blogs ? <>
                     <p>Posted by</p>
-                    <h1>{user}</h1>
+                    <h1>{username}</h1>
                         {blogs.map(blog => (
                             <BlogPost key={blog.blogId} blog={blog} 
                                 onDelete={(id) => {
